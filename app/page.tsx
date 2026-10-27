@@ -13,10 +13,8 @@ export default function Home() {
 
       <div className="flex min-h-[calc(100vh-73px)]">
         {/* Sidebar */}
-        <aside className="w-64 shrink-0 bg-white border-r border-gray-200 p-6">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">
-            <TaxAsessors/>
-          </h2>
+        <aside className="h-screen w-80 overflow-y-auto bg-white p-4 text-black">
+          <TaxAsessors/>
         </aside>
 
         {/* Main Content */}
@@ -24,7 +22,7 @@ export default function Home() {
           {/* Map placeholder */}
           <div className="h-screen overflow-hidden rounded-lg">
             <MapView />
-        </div>
+          </div>
         </main>
       </div>
     </div>
