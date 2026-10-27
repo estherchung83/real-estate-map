@@ -1,8 +1,9 @@
 'use client';
-
+import Map, { Marker, Popup, Source, Layer } from 'react-map-gl/mapbox';
 import { useState } from 'react';
-import Map, { Marker, Popup } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
+
+const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
 type Location = {
   id: number;
@@ -38,9 +39,7 @@ export default function MapView() {
 
   return (
     <Map
-      mapboxAccessToken={
-        process.env.NEXT_PUBLIC_MAPBOX_TOKEN
-      }
+      mapboxAccessToken={MAPBOX_TOKEN}
       initialViewState={{
         latitude: 40.748,
         longitude: -73.988,
