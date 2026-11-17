@@ -41,7 +41,10 @@ export default function Home() {
         {/* Main Content */}
         <main className="flex-1 min-w-0 p-6">
           <div className="h-full overflow-hidden rounded-lg">
-            <MapView setParcelId={setParcelId} />
+            <MapView
+              parcelId={parcelId}
+              setParcelId={setParcelId}
+            />
           </div>
         </main>
       </div>

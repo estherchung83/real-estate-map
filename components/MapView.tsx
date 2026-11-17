@@ -21,6 +21,7 @@ type Location = {
 };
 
 type MapViewProps = {
+  parcelId: string | null;
   setParcelId: (id: string) => void;
 };
 
@@ -45,7 +46,7 @@ const locations: Location[] = [
   },
 ];
 
-export default function MapView({ setParcelId }: MapViewProps) {
+export default function MapView({ parcelId, setParcelId }: MapViewProps) {
   const [selectedLocation, setSelectedLocation] =
     useState<Location | null>(null);
 
@@ -93,8 +94,13 @@ export default function MapView({ setParcelId }: MapViewProps) {
             source="parcels"
             source-layer="attom-parcels"
             paint={{
-              'fill-color': '#3b82f6',
-              'fill-opacity': 0.6,
+              'fill-color': [
+                'case',
+                ['==', ['get', 'ID'], parcelId ?? ''],
+                '#ff641c',
+                '#3b82f6',
+              ],
+              'fill-opacity': 0.3,
             }}
           />
 
