@@ -37,7 +37,7 @@ export default function PropertyExplorer() {
             )}
 
             {/* Tax Assessors */}
-            <TaxAssessors />
+            <TaxAssessors parcelId={parcelId} />
 
             </aside>
 
