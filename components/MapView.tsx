@@ -72,8 +72,7 @@ export default function MapView({ parcelId, setParcelId }: MapViewProps) {
 
         // Make parcel layers interactive
         interactiveLayerIds={[
-          'parcel-fill',
-          'parcel-outline',
+          'parcel-fill'
         ]}
 
         // Handle parcel clicks
