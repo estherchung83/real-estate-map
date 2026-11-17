@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import MapView from '@/components/MapView';
-import TaxAsessors from '@/components/TaxAssessors';
+import TaxAssessors from '@/components/TaxAssessors';
 
 export default function PropertyExplorer() {
     const [parcelId, setParcelId] = useState<string | null>(null);
@@ -37,7 +37,7 @@ export default function PropertyExplorer() {
             )}
 
             {/* Tax Assessors */}
-            <TaxAsessors />
+            <TaxAssessors />
 
             </aside>
 
